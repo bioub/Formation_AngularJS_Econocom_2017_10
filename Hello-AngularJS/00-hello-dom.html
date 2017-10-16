@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+ <div>
+   Prénom : <input class="prenom">
+ </div>
+ <p>
+   Bonjour <span class="afficher"></span> !
+ </p>
+ <script>
+    // Module : créer une portée au niveau du fichier
+    // IIFE : Immediately Invoked Function Expression
+    // Voir aussi : CommonJS, AMD, ES6
+    (function () {
+      'use strict';
+
+      var input = document.querySelector('.prenom');
+      var span = document.querySelector('.afficher');
+
+      input.addEventListener('input', function(event) {
+        span.innerText = input.value;
+      });
+    }());
+ </script>
+</body>
+</html>

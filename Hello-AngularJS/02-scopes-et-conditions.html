@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title ng-bind="prenom">Document</title>
+</head>
+
+<body>
+  <!--
+    6 -
+  -->
+  <div>
+    Prénom :
+    <input ng-model="prenoms" ng-list>
+  </div>
+  <p ng-repeat="prenom in prenoms track by $index">
+    Bonjour
+    <span ng-bind="prenom"></span> !
+  </p>
+  <script src="./node_modules/angular/angular.js"></script>
+</body>
+
+</html>
