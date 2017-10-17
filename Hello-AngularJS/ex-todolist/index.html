@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    Faire une todolist :
+    1 - Afficher une liste de Todos initiales
+    Ex dans un controller :
+    $scope.todos = [{value: 'Acheter du pain', done: true}];
+    Indice :
+    - ngChecked pour la checkbox : https://docs.angularjs.org/api/ng/directive/ngChecked
+    - Pour un objet ng-model peut s'écrire
+    ng-model="todo.value"
+    2 - Ajouter une nouvelle todos au submit du form
+    https://docs.angularjs.org/api/ng/directive/ngSubmit
+    Indice : créer un nouvel objet dans le tableau (soit cloner, soit nouvel objet avec les même valeur)
+    3 - Supprimer l'élement du tableau au clic du bouton moins
+    Indice : $index
+    MDN : Array.prototype.splice
+    4 - Au clic de la checked dans le formulaire
+    Cocher ou décocher toutes les autres en raffraichissant le tableau
+    Indice (ng-model et ng-click sur la checkbox)
+  -->
+  <h2>TodoList</h2>
+  <form>
+    <div>
+      <input type="checkbox">
+      <input type="text">
+      <button>+</button>
+    </div>
+  </form>
+  <div>
+    <div>
+      <input type="checkbox">
+      <input type="text">
+      <button>-</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -10,15 +10,34 @@
 
 <body>
   <!--
-    6 -
+    6 - certaines directive créent des scopes, c'est dire devient limiteuse
+    de portée pour les variables du template
+    Même analogie que les fonctions en JS
+    function ngApp() {
+      var prenoms = [];
+      var prenom = '';
+      function ngRepeat1() {
+        var prenom = '';
+      }
+      function ngRepeat2()) {
+        function ngIf() {
+
+        }
+      }
+    }
   -->
   <div>
     Prénom :
     <input ng-model="prenoms" ng-list>
+
+    <input ng-model="prenom">
   </div>
   <p ng-repeat="prenom in prenoms track by $index">
     Bonjour
     <span ng-bind="prenom"></span> !
+
+    <span ng-bind="$index"></span>
+    <button ng-if="$last">-</button>
   </p>
   <script src="./node_modules/angular/angular.js"></script>
 </body>
