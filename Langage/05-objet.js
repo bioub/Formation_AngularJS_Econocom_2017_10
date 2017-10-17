@@ -41,5 +41,6 @@ Contact.prototype.hello = function() {
 };
 
 const romain = new Contact('Romain');
+const eric = new Contact('Eric');
 console.log(typeof romain); // object
 console.log(romain.hello());

@@ -13,8 +13,10 @@ console.log(typeof externe); // 'function'
 console.log(typeof interne); // 'undefined'
 
 const hello = externe('Hello');
+const bonjour = externe('Bonjour');
 console.log(typeof hello); // 'function'
 hello(); // Hello
+bonjour(); // Bonjour
 
 // sans closure
 for (var i=0; i<3; i++) {
