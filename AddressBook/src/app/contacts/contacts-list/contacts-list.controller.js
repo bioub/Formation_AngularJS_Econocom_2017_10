@@ -1,13 +1,9 @@
-(function() {
-  'use strict';
+class ContactListCtrl {
+    constructor(contactService) {
+        this.contacts = contactService.query();
+    }
+}
 
-  var ContactListCtrl = function(contactService) {
-    this.contacts = contactService.query();
-  };
+ContactListCtrl.$inject = ['contactService'];
 
-  ContactListCtrl.$inject = ['contactService'];
-
-  var module = angular.module('contacts.module');
-  module.controller('ContactListCtrl', ContactListCtrl);
-
-}());
+export default ContactListCtrl;

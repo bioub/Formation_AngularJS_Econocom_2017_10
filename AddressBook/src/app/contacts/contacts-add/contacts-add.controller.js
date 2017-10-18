@@ -1,19 +1,16 @@
-(function() {
-  'use strict';
 
-  var ContactAddCtrl = function(contactService) {
-    this.contactService = contactService;
-  };
+class ContactAddCtrl {
+    constructor(contactService) {
+        this.contactService = contactService;
+    }
+    ajouter(contact) {
+        this.contactService.save(contact, function() {
+            console.log('OK !!!');
+        });
+    }
+}
 
-  ContactAddCtrl.prototype.ajouter = function(contact) {
-    this.contactService.save(contact, function() {
-      console.log('OK');
-    })
-  };
 
-  ContactAddCtrl.$inject = ['contactService'];
+ContactAddCtrl.$inject = ['contactService'];
 
-  var module = angular.module('contacts.module');
-  module.controller('ContactAddCtrl', ContactAddCtrl);
-
-}());
+export default ContactAddCtrl;

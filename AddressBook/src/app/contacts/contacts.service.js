@@ -1,38 +1,30 @@
-(function() {
-  'use strict';
+/*
+var ContactService = function() {
 
-  var module = angular.module('contacts.module');
+};
 
-  /*
-  var ContactService = function() {
+module.service('contactService', ContactService);
+*/
 
+/*
+var contactServiceFactory = function($http) {
+  return {
+    getList: function() {
+      return $http.get('http://jsonplaceholder.typicode.com/users');
+    },
+    getById: function(id) {
+      return $http.get('http://jsonplaceholder.typicode.com/users/' + id);
+    },
   };
+};
 
-  module.service('contactService', ContactService);
-  */
+contactServiceFactory.$inject = ['$http'];
+*/
 
-  /*
-  var contactServiceFactory = function($http) {
-    return {
-      getList: function() {
-        return $http.get('http://jsonplaceholder.typicode.com/users');
-      },
-      getById: function(id) {
-        return $http.get('http://jsonplaceholder.typicode.com/users/' + id);
-      },
-    };
-  };
+var contactServiceFactory = function ($resource) {
+  return $resource('http://jsonplaceholder.typicode.com/users/:userId', { userId: '@id' });
+};
 
-  contactServiceFactory.$inject = ['$http'];
-  */
+contactServiceFactory.$inject = ['$resource'];
 
-  var contactServiceFactory = function($resource) {
-    return $resource('http://jsonplaceholder.typicode.com/users/:userId', {userId:'@id'});
-  };
-
-  contactServiceFactory.$inject = ['$resource'];
-
-  module.factory('contactService', contactServiceFactory);
-
-
-}());
+export default contactServiceFactory;
