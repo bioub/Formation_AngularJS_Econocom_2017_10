@@ -1,0 +1,29 @@
+<div class="cols">
+  <ul>
+    <li ng-repeat="contact in $ctrl.contacts">
+      <a ui-sref="contacts.show({contactId: contact.id})"
+         ui-sref-active="current">
+         {{contact.name}}
+        </a>
+    </li>
+  </ul>
+  <div ui-view>
+    Coucou
+  </div>
+</div>
+
+<style>
+  .cols {
+    display: flex;
+  }
+  .cols > ul {
+    list-style: none;
+    margin: 0;
+  }
+  .cols > ul .current {
+    font-weight: bold;
+  }
+  .cols > * {
+    padding: 5px;
+  }
+</style>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-strict-di>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/angular-loading-bar/build/loading-bar.css">
+</head>
+<body>
+  <nav>
+    <a ui-sref="contacts">Liste</a>
+    <a ui-sref="contacts.add">Ajouter</a>
+  </nav>
+  <div ui-view>
+
+  </div>
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/@uirouter/core/_bundles/ui-router-core.js"></script>
+  <script src="../node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+  <script src="../node_modules/angular-loading-bar/build/loading-bar.js"></script>
+  <script src="./app/contacts/contacts.module.js"></script>
+  <script src="./app/contacts/contacts-add/contacts-add.controller.js"></script>
+  <script src="./app/contacts/contacts-list/contacts-list.controller.js"></script>
+  <script src="./app/contacts/contacts-show/contacts-show.controller.js"></script>
+  <script src="./app/app.module.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
