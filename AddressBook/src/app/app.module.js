@@ -30,12 +30,16 @@
     $stateProvider.state({
       name: 'contacts.add',
       url: '/add',
+      controller: 'ContactAddCtrl',
+      controllerAs: '$ctrl',
       templateUrl: './app/contacts/contacts-add/contacts-add.template.html',
     });
 
     $stateProvider.state({
       name: 'contacts.show',
       url: '/{contactId}',
+      controller: 'ContactShowCtrl',
+      controllerAs: '$ctrl',
       templateUrl: './app/contacts/contacts-show/contacts-show.template.html',
     });
   }]);

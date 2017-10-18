@@ -1,15 +1,11 @@
 (function() {
   'use strict';
 
-  var ContactListCtrl = function($http) {
-    var that = this;
-    $http.get('http://jsonplaceholder.typicode.com/users')
-      .then(function(res) {
-        that.contacts = res.data;
-      });
+  var ContactListCtrl = function(contactService) {
+    this.contacts = contactService.query();
   };
 
-  ContactListCtrl.$inject = ['$http'];
+  ContactListCtrl.$inject = ['contactService'];
 
   var module = angular.module('contacts.module');
   module.controller('ContactListCtrl', ContactListCtrl);

@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  var module = angular.module('contacts.module', []);
+  var module = angular.module('contacts.module', ['ngResource']);
 
 
 }());
