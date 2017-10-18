@@ -10,7 +10,7 @@ const contactClosure = {
 
 contactClosure.helloAsync();
 
-function hello() {
+function hello(a, b, c) {
   console.log('hello global : Bonjour ' + this.prenom);
 }
 

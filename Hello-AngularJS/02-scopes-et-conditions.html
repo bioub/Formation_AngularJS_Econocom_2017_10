@@ -34,7 +34,8 @@
   </div>
   <p ng-repeat="prenom in prenoms track by $index">
     Bonjour
-    <span ng-bind="prenom"></span> !
+    <span ng-bind="prenom"></span>
+    <span ng-bind="$parent.prenom"></span> !
 
     <span ng-bind="$index"></span>
     <button ng-if="$last">-</button>
